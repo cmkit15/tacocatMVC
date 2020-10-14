@@ -1,0 +1,38 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+<div class="row text-center">
+    <div class="col">
+        <h1 class="display-4">Solve</h1>
+    </div>
+</div>
+
+<div class="row text-center">
+    <div class="col">
+        <p>Enter any word, number or even a phrase and see if it's a palindrome.</p>
+    </div>
+</div>
+
+<div class="row text-center">
+    <div class="col results-section">
+        <span id="tacocatResults">@ViewData["result"]</span>
+        <span class="error-message"></span>
+    </div>
+</div>
+
+<div class="row text-center">
+    <div class="col input-section">
+        <form asp-action="TacoCat">
+            <input class="form-control" type="text" name="userInput" autocomplete="off" placeholder="Enter a word or a phrase" id="userInput">
+            <button class="btn btn-danger" onclick="reset()">Clear</button>
+            <button type="submit" class="btn btn-primary" id="submit">Reverse</button>
+        </form>
+    </div>
+</div>
+
+
+
+
+
